@@ -1,0 +1,74 @@
+.products {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(280px, 1fr));
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: white;
+}
+
+.image {
+    text-align: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.info {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.info h3 {
+    margin: 0;
+    color: #333;
+}
+
+.id {
+    text-align: center;
+}
+
+.id p {
+    margin: 0;
+}
+
+.red {
+    color: red;
+}
+
+.btn {
+    text-align: center;
+}
+
+.btn2 {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn2:hover {
+    background-color: #007bff;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(70% - 40px);
+        margin-left: 20px;
+    }
+
+    .products {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
