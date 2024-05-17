@@ -1,15 +1,15 @@
-import "../App.css"
-import { useContext } from "react"
-import { CartContext } from "./cartContext"
+import "../App.css";
+import { useContext } from "react";
+import { CartContext } from "./cartContext";
+function Nav({ isCart, setIsCart }) {
 
+  const { shopping: { cart } } = useContext(CartContext);
 
-function Nav({isCart,setIsCart}) {
-  const {shopping:{cart}}=useContext(CartContext)
   return (
     <header className="main_1_div">
-        <nav className="navbar">
-            <h1>Products</h1>
-            <a
+      <nav className="navbar">
+        <h1>Products</h1>
+        <a
           href="#"
           className="back"
           onClick={(e) => {
@@ -19,10 +19,13 @@ function Nav({isCart,setIsCart}) {
         >
           Cart({cart.length})
         </a>
-        </nav>
+      </nav>
     </header>
-  )
+  );
 }
 
-
 export default Nav;
+
+
+
+

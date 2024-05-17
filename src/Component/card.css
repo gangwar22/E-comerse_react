@@ -1,8 +1,12 @@
 .products {
+    position: relative;
+    top: 50px;
     display: grid;
-    grid-template-columns: repeat(5, minmax(280px, 1fr));
-    justify-content: center;
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 20px;
 }
 
 .card {
@@ -11,6 +15,12 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     background-color: white;
+    color: black;
+    overflow: hidden;
+    margin: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .image {
@@ -56,19 +66,49 @@
     border-radius: 4px;
     padding: 10px 20px;
     cursor: pointer;
+    width: 100%; 
+    max-width: 200px; 
 }
 
 .btn2:hover {
-    background-color: #007bff;
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 1200px) {
+    .products {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr); 
+    }
 }
 
 @media screen and (max-width: 768px) {
-    .card {
-        width: calc(70% - 40px);
-        margin-left: 20px;
-    }
-
     .products {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .products {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+    .card {
+        width: auto; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .products {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+    .card {
+        width: auto; 
     }
 }

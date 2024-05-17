@@ -1,10 +1,9 @@
-// CartCard.js
 import { useContext } from "react";
 import { CartContext } from "./cartContext";
-import "./card.css"
+import "./card.css";
 
 function CartCard({ item }) {
-    const { image, name, price } = item;
+    const { image, name, price, description } = item;
     const { dispatch } = useContext(CartContext);
 
     function handleDelete() {
@@ -18,14 +17,14 @@ function CartCard({ item }) {
         <div className="box1">
             <div className="card">
                 <div className="image">
-                <img width="500" height="195" src={image} alt="" />
+                    <img width="500" height="195" src={image} alt={name} />
                 </div>
                 <h1>{name}</h1>
-                <p>Rs .{price}</p>
-           
-            <div className="btn">
-                <button onClick={handleDelete}>Delete</button>
-            </div>
+                {/* <p>{description}</p> */}
+                <p>Rs. {price}</p>
+                <div className="btn">
+                    <button onClick={handleDelete}>Delete</button>
+                </div>
             </div>
         </div>
     );

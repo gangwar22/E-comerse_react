@@ -17,16 +17,26 @@ function App() {
 
     return (
         <>
-            {isLogin ?  
+         
+               {isLogin ?  
                 <CartProvider>
                     <main>
                         <Nav isCart={isCart} setIsCart={setIsCart} />
                         {isCart ? <Cart /> : <Products />}
                     </main>
-                </CartProvider> 
-                : <Form setIsLogin={handleLogin} />}
+
+                </CartProvider>
+
+             : <Form setIsLogin={handleLogin} /> }
         </>
     );
 }
 
+
+
 export default App;
+
+
+
+
+

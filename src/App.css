@@ -1,35 +1,35 @@
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     background-color: black;
-    color: white;align-items: center;
+    color: white;
+    align-items: center;
     font-size: 1.5rem;
     width: 100%;
-
-}
-
-.navbar h1{
+    padding: 10px 20px; 
     position: relative;
-    left: 20px;
-    font-size: 2.5rem;
+    top: 1vh;
 }
 
-.navbar a{
-    position: relative;
-    right: 20px;
+.navbar h1 {
     font-size: 2.5rem;
+    margin-left: 20px; 
 }
 
-body{
+.navbar a {
+    font-size: 2.5rem;
+    margin-right: 20px; 
+}
+
+body {
     background-color: gray;
+    margin: 0; 
+    padding: 0; 
 }
 
-.back{
+.back {
     background-color: black;
     color: white;
     font-size: 1.5rem;
+    padding: 10px 20px; 
 }
-
-
-
-
